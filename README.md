@@ -41,3 +41,59 @@ The inventory system maintains stock movement history and uses database transact
 git clone <YOUR_GITHUB_REPOSITORY_URL>
 cd erp-crm
 ```
+
+### 2. Database Setup
+Create the MySQL database:
+
+```bash
+CREATE DATABASE erp_crm;
+```
+
+### 3. Backend Setup
+
+```bash
+cd backend
+npm install
+```
+Generate Prisma Client and run the database migration-
+
+```bash
+npx prisma generate
+npx prisma migrate dev
+```
+
+Seed the database-
+
+```bash
+npm run seed
+```
+
+Start the backend-
+
+```bash
+npm run dev
+```
+
+### 4. Frontend Setup
+
+Open a new terminal-
+
+```bash
+cd frontend
+npm install
+```
+
+Start the frontend-
+
+```bash
+npm run dev
+```
+
+### 5. Test Accounts
+| Role      | Email                | Password    |
+| --------- | -------------------- | ----------- |
+| Admin     | `admin@erp.test`     | `Admin@123` |
+| Sales     | `sales@erp.test`     | `Admin@123` |
+| Warehouse | `warehouse@erp.test` | `Admin@123` |
+| Accounts  | `accounts@erp.test`  | `Admin@123` |
+
