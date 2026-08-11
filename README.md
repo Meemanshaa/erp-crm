@@ -97,3 +97,6 @@ npm run dev
 | Warehouse | `warehouse@erp.test` | `Admin@123` |
 | Accounts  | `accounts@erp.test`  | `Admin@123` |
 
+### 6. Architecture Summary
+
+Built with Express.js, TypeScript, React, Vite, Tailwind CSS, and MySQL using Prisma ORM. Role-Based Access Control (RBAC) is enforced across backend routes using JWT authentication. Core business logic wraps sales challan confirmation inside prisma.$transaction—checking stock availability before committing deductions to strictly prevent negative stock under concurrent requests. Historical product data (Name, SKU, Price) is snapshotted directly on line items at the time of sale.
